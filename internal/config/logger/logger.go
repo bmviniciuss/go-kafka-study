@@ -16,9 +16,11 @@ func NewLogger() *zap.SugaredLogger {
 			MessageKey:     "message",
 			LevelKey:       "level",
 			TimeKey:        "time",
+			CallerKey:      "caller",
 			EncodeLevel:    zapcore.CapitalLevelEncoder,
 			EncodeTime:     zapcore.ISO8601TimeEncoder,
 			EncodeDuration: zapcore.SecondsDurationEncoder,
+			EncodeCaller:   zapcore.ShortCallerEncoder,
 		},
 	}
 
